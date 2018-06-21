@@ -17,7 +17,7 @@
   },
   "private": true,
   "devDependencies": {
-    "gh-pages": "^1.0.0"
+    "gh-pages": "^1.2.0"
   },
   "scripts": {
     "deploy": "npm run build && deploy-to-gh-pages --update web_deploy",
