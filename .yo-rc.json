@@ -1,0 +1,11 @@
+{
+  "generator-openapi-repo": {
+    "importExistingSpec": true,
+    "importedSpec": "/Users/anthonyroani/Downloads/turquoise_api_swagger.json",
+    "name": "retail",
+    "repo": "anthorn69/retail-api",
+    "splitSpec": false,
+    "samples": true,
+    "installSwaggerUI": true
+  }
+}
