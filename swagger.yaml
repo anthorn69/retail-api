@@ -1,0 +1,1188 @@
+swagger: '2.0'
+info:
+  version: '1.0'
+  title: '[DEVELOPMENT] Retail'
+  description: 'TODO: Add Description'
+host: turquoise.toutophone.com
+basePath: /trade-app-v2
+schemes:
+  - https
+consumes:
+  - application/json
+produces:
+  - application/json
+paths:
+  /deleteabsent:
+    post:
+      description: Delete absence
+      summary: Delete Absence
+      tags:
+        - Absences
+      operationId: DeleteabsentPost
+      produces:
+        - application/json
+      parameters:
+        - name: Body
+          in: body
+          required: true
+          description: ''
+          schema:
+            $ref: '#/definitions/DeleteAbsencerequest'
+        - name: Content-Type
+          in: header
+          required: true
+          type: string
+          description: ''
+      responses:
+        '200':
+          description: ''
+      security: []
+      x-unitTests:
+        - request:
+            method: POST
+            uri: /deleteabsent
+            headers:
+              Content-Type: application/json
+            body: '{"animationDate":"06/02/2018","animationId":"648C00E9C0B41933E053F403A8C02BCC","presenterId":"5DE06201649D0D03E053F403A8C003F5","UserOracle":"DEV_TOP_TRADE_OPHONE_V3"}'
+          expectedResponse:
+            x-allowExtraHeaders: true
+            x-bodyMatchMode: NONE
+            x-arrayOrderedMatching: false
+            x-arrayCheckCount: false
+            x-matchResponseSchema: true
+            headers: {}
+          x-testShouldPass: true
+          x-testEnabled: true
+          x-testName: Delete Absence
+          x-testDescription: Delete absence
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /getanimations:
+    post:
+      description: ''
+      summary: Animations
+      tags:
+        - Animations
+      operationId: GetanimationsPost
+      produces:
+        - application/json
+      parameters:
+        - name: Body
+          in: body
+          required: true
+          description: ''
+          schema:
+            $ref: '#/definitions/AnimationsRequest'
+        - name: Content-Type
+          in: header
+          required: true
+          type: string
+          description: ''
+      responses:
+        '200':
+          description: ''
+      security: []
+      x-unitTests:
+        - request:
+            method: POST
+            uri: /getanimations
+            headers:
+              Content-Type: application/json
+            body: '{"presenterId":"5DE0620164AF0D03E053F403A8C003F5","calltype":""}'
+          expectedResponse:
+            x-allowExtraHeaders: true
+            x-bodyMatchMode: NONE
+            x-arrayOrderedMatching: false
+            x-arrayCheckCount: false
+            x-matchResponseSchema: true
+            headers: {}
+          x-testShouldPass: true
+          x-testEnabled: true
+          x-testName: Animations
+          x-testDescription: ''
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /getproduits:
+    post:
+      description: ''
+      summary: GetProduit
+      tags:
+        - Products / Ruptures
+      operationId: GetproduitsPost
+      produces:
+        - application/json
+      parameters:
+        - name: Body
+          in: body
+          required: true
+          description: ''
+          schema:
+            $ref: '#/definitions/GetProduitRequest'
+        - name: Content-Type
+          in: header
+          required: true
+          type: string
+          description: ''
+      responses:
+        '200':
+          description: ''
+      security: []
+      x-unitTests:
+        - request:
+            method: POST
+            uri: /getproduits
+            headers:
+              Content-Type: application/json
+            body: '{"presenterId":"5DE0620164AF0D03E053F403A8C003F5"}'
+          expectedResponse:
+            x-allowExtraHeaders: true
+            x-bodyMatchMode: NONE
+            x-arrayOrderedMatching: false
+            x-arrayCheckCount: false
+            x-matchResponseSchema: true
+            headers: {}
+          x-testShouldPass: true
+          x-testEnabled: true
+          x-testName: GetProduit
+          x-testDescription: ''
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /getaccountinfo:
+    post:
+      description: ''
+      summary: Accound Info
+      tags:
+        - Diverse
+      operationId: GetaccountinfoPost
+      produces:
+        - application/json
+      parameters:
+        - name: Body
+          in: body
+          required: true
+          description: ''
+          schema:
+            $ref: '#/definitions/AccoundInforequest'
+        - name: Content-Type
+          in: header
+          required: true
+          type: string
+          description: ''
+      responses:
+        '200':
+          description: ''
+      security: []
+      x-unitTests:
+        - request:
+            method: POST
+            uri: /getaccountinfo
+            headers:
+              Content-Type: application/json
+            body: '{"userId":"5DE06201649D0D03E053F403A8C003F5"}'
+          expectedResponse:
+            x-allowExtraHeaders: true
+            x-bodyMatchMode: NONE
+            x-arrayOrderedMatching: false
+            x-arrayCheckCount: false
+            x-matchResponseSchema: true
+            headers: {}
+          x-testShouldPass: true
+          x-testEnabled: true
+          x-testName: Accound Info
+          x-testDescription: ''
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /getcomments:
+    post:
+      description: ''
+      summary: GetComments
+      tags:
+        - Comments
+      operationId: GetcommentsPost
+      produces:
+        - application/json
+      parameters:
+        - name: Body
+          in: body
+          required: true
+          description: ''
+          schema:
+            $ref: '#/definitions/GetCommentsRequest'
+        - name: Content-Type
+          in: header
+          required: true
+          type: string
+          description: ''
+      responses:
+        '200':
+          description: ''
+      security: []
+      x-unitTests:
+        - request:
+            method: POST
+            uri: /getcomments
+            headers:
+              Content-Type: application/json
+            body: '{"animationId":"5EF437B0C58F2A7EE053E403A8C097E4","UserOracle":"TOP_TRADE_OPHONE_V3"}'
+          expectedResponse:
+            x-allowExtraHeaders: true
+            x-bodyMatchMode: NONE
+            x-arrayOrderedMatching: false
+            x-arrayCheckCount: false
+            x-matchResponseSchema: true
+            headers: {}
+          x-testShouldPass: true
+          x-testEnabled: true
+          x-testName: GetComments
+          x-testDescription: ''
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /login:
+    post:
+      description: ''
+      summary: Login
+      tags:
+        - Login / Logout
+      operationId: LoginPost
+      produces:
+        - application/json
+      parameters:
+        - name: Body
+          in: body
+          required: true
+          description: ''
+          schema:
+            $ref: '#/definitions/LoginRequest'
+        - name: Content-Type
+          in: header
+          required: true
+          type: string
+          description: ''
+      responses:
+        '200':
+          description: ''
+      security: []
+      x-unitTests:
+        - request:
+            method: POST
+            uri: /login
+            headers:
+              Content-Type: application/json
+            body: '{"username":"re.daniel.ha","password":"daniel1"}'
+          expectedResponse:
+            x-allowExtraHeaders: true
+            x-bodyMatchMode: NONE
+            x-arrayOrderedMatching: false
+            x-arrayCheckCount: false
+            x-matchResponseSchema: true
+            headers: {}
+          x-testShouldPass: true
+          x-testEnabled: true
+          x-testName: Login
+          x-testDescription: ''
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /getversionstate:
+    post:
+      description: ''
+      summary: Send report
+      tags:
+        - Survey
+      operationId: GetversionstatePost
+      produces:
+        - application/json
+      parameters:
+        - name: Body
+          in: body
+          required: true
+          description: ''
+          schema:
+            $ref: '#/definitions/SendReportrequest'
+        - name: Content-Type
+          in: header
+          required: true
+          type: string
+          description: ''
+      responses:
+        '200':
+          description: ''
+      security: []
+      x-unitTests:
+        - request:
+            method: POST
+            uri: /getversionstate
+            headers:
+              Content-Type: application/json
+            body: '{"appVersion":"0.0.9","presenterId":"5DE06201649D0D03E053F403A8C003F5"}'
+          expectedResponse:
+            x-allowExtraHeaders: true
+            x-bodyMatchMode: NONE
+            x-arrayOrderedMatching: false
+            x-arrayCheckCount: false
+            x-matchResponseSchema: true
+            headers: {}
+          x-testShouldPass: true
+          x-testEnabled: true
+          x-testName: Send report
+          x-testDescription: ''
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /getanimationbyid:
+    post:
+      description: ''
+      summary: Animation By ID
+      tags:
+        - Animations
+      operationId: GetanimationbyidPost
+      produces:
+        - application/json
+      parameters:
+        - name: Body
+          in: body
+          required: true
+          description: ''
+          schema:
+            $ref: '#/definitions/AnimationByIdrequest'
+        - name: Content-Type
+          in: header
+          required: true
+          type: string
+          description: ''
+      responses:
+        '200':
+          description: ''
+      security: []
+      x-unitTests:
+        - request:
+            method: POST
+            uri: /getanimationbyid
+            headers:
+              Content-Type: application/json
+            body: '{"animationId":"652B8C3526BE2F17E053F403A8C05AA1","UserOracle":"DEV_TOP_TRADE_OPHONE_V3"}'
+          expectedResponse:
+            x-allowExtraHeaders: true
+            x-bodyMatchMode: NONE
+            x-arrayOrderedMatching: false
+            x-arrayCheckCount: false
+            x-matchResponseSchema: true
+            headers: {}
+          x-testShouldPass: true
+          x-testEnabled: true
+          x-testName: Animation By ID
+          x-testDescription: ''
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /sendcr:
+    post:
+      description: ''
+      summary: Send FP
+      tags:
+        - Survey
+      operationId: SendcrPost
+      produces:
+        - application/json
+      parameters:
+        - name: Body
+          in: body
+          required: true
+          description: ''
+          schema:
+            $ref: '#/definitions/SendFprequest'
+        - name: Content-Type
+          in: header
+          required: true
+          type: string
+          description: ''
+      responses:
+        '200':
+          description: ''
+      security: []
+      x-unitTests:
+        - request:
+            method: POST
+            uri: /sendcr
+            headers:
+              Content-Type: application/json
+            body: '{"animationId":"648C00E9C0B41933E053F403A8C02BCC","presenterId":"3A316DF3C8347487E053F603A8C03468","hours_fp":"06/02/2018 16:16:40","type":"FP","UserOracle":"DEV_TOP_TRADE_OPHONE_V3"}'
+          expectedResponse:
+            x-allowExtraHeaders: true
+            x-bodyMatchMode: NONE
+            x-arrayOrderedMatching: false
+            x-arrayCheckCount: false
+            x-matchResponseSchema: true
+            headers: {}
+          x-testShouldPass: true
+          x-testEnabled: true
+          x-testName: Send FP
+          x-testDescription: ''
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /uploadimage:
+    post:
+      description: ''
+      summary: Upload Image
+      tags:
+        - Photo
+      operationId: UploadimagePost
+      produces:
+        - application/json
+      consumes:
+        - multipart/form-data
+      parameters:
+        - name: json
+          in: formData
+          required: true
+          type: string
+          description: ''
+        - name: file
+          in: formData
+          required: true
+          type: file
+          format: file
+          description: ''
+      responses:
+        '200':
+          description: ''
+      security: []
+      x-unitTests: []
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /sendpp:
+    post:
+      description: ''
+      summary: Send PP
+      tags:
+        - Survey
+      operationId: SendppPost
+      produces:
+        - application/json
+      parameters:
+        - name: Body
+          in: body
+          required: true
+          description: ''
+          schema:
+            $ref: '#/definitions/SendPprequest'
+        - name: Content-Type
+          in: header
+          required: true
+          type: string
+          description: ''
+      responses:
+        '200':
+          description: ''
+      security: []
+      x-unitTests:
+        - request:
+            method: POST
+            uri: /sendpp
+            headers:
+              Content-Type: application/json
+            body: '{"UserOracle":"DEV_TOP_TRADE_OPHONE_V3","animationId":"648C00E9C0B41933E053F403A8C02BCC","answers":{},"hourspp":"06/02/2018 15:35"}'
+          expectedResponse:
+            x-allowExtraHeaders: true
+            x-bodyMatchMode: NONE
+            x-arrayOrderedMatching: false
+            x-arrayCheckCount: false
+            x-matchResponseSchema: true
+            headers: {}
+          x-testShouldPass: true
+          x-testEnabled: true
+          x-testName: Send PP
+          x-testDescription: ''
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /getabsencetypes:
+    post:
+      description: ''
+      summary: Absence Types
+      tags:
+        - Absences
+      operationId: GetabsencetypesPost
+      produces:
+        - application/json
+      parameters:
+        - name: Content-Type
+          in: header
+          required: true
+          type: string
+          description: ''
+      responses:
+        '200':
+          description: ''
+      security: []
+      x-unitTests:
+        - request:
+            method: POST
+            uri: /getabsencetypes
+            headers:
+              Content-Type: application/json
+          expectedResponse:
+            x-allowExtraHeaders: true
+            x-bodyMatchMode: NONE
+            x-arrayOrderedMatching: false
+            x-arrayCheckCount: false
+            x-matchResponseSchema: true
+            headers: {}
+          x-testShouldPass: true
+          x-testEnabled: true
+          x-testName: Absence Types
+          x-testDescription: ''
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /sendrupture:
+    post:
+      description: ''
+      summary: SendRupture
+      tags:
+        - Products / Ruptures
+      operationId: SendrupturePost2
+      produces:
+        - application/json
+      parameters:
+        - name: Body
+          in: body
+          required: true
+          description: ''
+          schema:
+            $ref: '#/definitions/SendRuptureRequest'
+        - name: Content-Type
+          in: header
+          required: true
+          type: string
+          description: ''
+      responses:
+        '200':
+          description: ''
+      security: []
+      x-unitTests:
+        - request:
+            method: POST
+            uri: /sendrupture
+            headers:
+              Content-Type: application/json
+            body: '{"typecall":"ADD","animationId":"68657BF3188968DEE053F403A8C0A262","presenterId":"3A316DF3C8347487E053F603A8C03468","storeId":"4E11FD4BB51010D9E053F403A8C09270","createdOn":"17/04/2018 16:14","UserOracle":"DEV_TOP_TRADE_OPHONE_V3","produitList":{"69923BFA5ABD5E32E053F403A8C08C52":"","698F6D0FC2E8093DE053F403A8C02B77":""}}'
+          expectedResponse:
+            x-allowExtraHeaders: true
+            x-bodyMatchMode: NONE
+            x-arrayOrderedMatching: false
+            x-arrayCheckCount: false
+            x-matchResponseSchema: true
+            headers: {}
+          x-testShouldPass: true
+          x-testEnabled: true
+          x-testName: SendRupture
+          x-testDescription: ''
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /logout:
+    post:
+      description: ''
+      summary: Logout
+      tags:
+        - Login / Logout
+      operationId: LogoutPost
+      produces:
+        - application/json
+      parameters:
+        - name: Content-Type
+          in: header
+          required: true
+          type: string
+          description: ''
+      responses:
+        '200':
+          description: ''
+      security: []
+      x-unitTests:
+        - request:
+            method: POST
+            uri: /logout
+            headers:
+              Content-Type: application/json
+          expectedResponse:
+            x-allowExtraHeaders: true
+            x-bodyMatchMode: NONE
+            x-arrayOrderedMatching: false
+            x-arrayCheckCount: false
+            x-matchResponseSchema: true
+            headers: {}
+          x-testShouldPass: true
+          x-testEnabled: true
+          x-testName: Logout
+          x-testDescription: ''
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /sendabsent:
+    post:
+      description: ''
+      summary: Create Absence
+      tags:
+        - Absences
+      operationId: SendabsentPost
+      produces:
+        - application/json
+      parameters:
+        - name: Body
+          in: body
+          required: true
+          description: ''
+          schema:
+            $ref: '#/definitions/CreateAbsencerequest'
+        - name: Content-Type
+          in: header
+          required: true
+          type: string
+          description: ''
+      responses:
+        '200':
+          description: ''
+      security: []
+      x-unitTests:
+        - request:
+            method: POST
+            uri: /sendabsent
+            headers:
+              Content-Type: application/json
+            body: '{"presenterId":"5DE0620164510D03E053F403A8C003F5","animationDate":"20/02/2018","animationId":"652B8C35266E2F17E053F403A8C05AA1","reason":"38738DC3916242F9E053F403A8C0733A","comment":"","UserOracle":"DEV_TOP_TRADE_OPHONE_V3"}'
+          expectedResponse:
+            x-allowExtraHeaders: true
+            x-bodyMatchMode: NONE
+            x-arrayOrderedMatching: false
+            x-arrayCheckCount: false
+            x-matchResponseSchema: true
+            headers: {}
+          x-testShouldPass: true
+          x-testEnabled: true
+          x-testName: Create Absence
+          x-testDescription: ''
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /getdictionaries:
+    post:
+      description: ''
+      summary: GetDictionnaries
+      tags:
+        - Survey
+      operationId: GetdictionariesPost
+      produces:
+        - application/json
+      parameters:
+        - name: Body
+          in: body
+          required: true
+          description: ''
+          schema:
+            $ref: '#/definitions/GetDictionnariesRequest'
+        - name: Content-Type
+          in: header
+          required: true
+          type: string
+          description: ''
+      responses:
+        '200':
+          description: ''
+      security: []
+      x-unitTests:
+        - request:
+            method: POST
+            uri: /getdictionaries
+            headers:
+              Content-Type: application/json
+            body: '{"presenterId":"5DE0620164AF0D03E053F403A8C003F5"}'
+          expectedResponse:
+            x-allowExtraHeaders: true
+            x-bodyMatchMode: NONE
+            x-arrayOrderedMatching: false
+            x-arrayCheckCount: false
+            x-matchResponseSchema: true
+            headers: {}
+          x-testShouldPass: true
+          x-testEnabled: true
+          x-testName: GetDictionnaries
+          x-testDescription: ''
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /sendcomment:
+    post:
+      description: ''
+      summary: sendcomment
+      tags:
+        - Comments
+      operationId: SendcommentPost
+      produces:
+        - application/json
+      parameters:
+        - name: Body
+          in: body
+          required: true
+          description: ''
+          schema:
+            $ref: '#/definitions/SendcommentRequest'
+        - name: Content-Type
+          in: header
+          required: true
+          type: string
+          description: ''
+      responses:
+        '200':
+          description: ''
+      security: []
+      x-unitTests:
+        - request:
+            method: POST
+            uri: /sendcomment
+            headers:
+              Content-Type: application/json
+            body: '{"comment":"éàààà","animationId":"6865A7D7E371699EE053F403A8C0CCCA","CommentDate":"16/04/2018 16:09:36","UserOracle":"DEV_TOP_TRADE_OPHONE_V3"}'
+          expectedResponse:
+            x-allowExtraHeaders: true
+            x-bodyMatchMode: NONE
+            x-arrayOrderedMatching: false
+            x-arrayCheckCount: false
+            x-matchResponseSchema: true
+            headers: {}
+          x-testShouldPass: true
+          x-testEnabled: true
+          x-testName: sendcomment
+          x-testDescription: ''
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+definitions:
+  DeleteAbsencerequest:
+    title: Delete AbsenceRequest
+    example:
+      animationDate: 06/02/2018
+      animationId: 648C00E9C0B41933E053F403A8C02BCC
+      presenterId: 5DE06201649D0D03E053F403A8C003F5
+      UserOracle: DEV_TOP_TRADE_OPHONE_V3
+    type: object
+    properties:
+      animationDate:
+        description: ''
+        example: 06/02/2018
+        type: string
+      animationId:
+        description: ''
+        example: 648C00E9C0B41933E053F403A8C02BCC
+        type: string
+      presenterId:
+        description: ''
+        example: 5DE06201649D0D03E053F403A8C003F5
+        type: string
+      UserOracle:
+        description: ''
+        example: DEV_TOP_TRADE_OPHONE_V3
+        type: string
+    required:
+      - animationDate
+      - animationId
+      - presenterId
+      - UserOracle
+  AnimationsRequest:
+    title: AnimationsRequest
+    example:
+      presenterId: 5DE0620164AF0D03E053F403A8C003F5
+      calltype: ''
+    type: object
+    properties:
+      presenterId:
+        description: ''
+        example: 5DE0620164AF0D03E053F403A8C003F5
+        type: string
+      calltype:
+        description: ''
+        type: string
+    required:
+      - presenterId
+      - calltype
+  GetProduitRequest:
+    title: GetProduitRequest
+    example:
+      presenterId: 5DE0620164AF0D03E053F403A8C003F5
+    type: object
+    properties:
+      presenterId:
+        description: ''
+        example: 5DE0620164AF0D03E053F403A8C003F5
+        type: string
+    required:
+      - presenterId
+  AccoundInforequest:
+    title: Accound InfoRequest
+    example:
+      userId: 5DE06201649D0D03E053F403A8C003F5
+    type: object
+    properties:
+      userId:
+        description: ''
+        example: 5DE06201649D0D03E053F403A8C003F5
+        type: string
+    required:
+      - userId
+  GetCommentsRequest:
+    title: GetCommentsRequest
+    example:
+      animationId: 5EF437B0C58F2A7EE053E403A8C097E4
+      UserOracle: TOP_TRADE_OPHONE_V3
+    type: object
+    properties:
+      animationId:
+        description: ''
+        example: 5EF437B0C58F2A7EE053E403A8C097E4
+        type: string
+      UserOracle:
+        description: ''
+        example: TOP_TRADE_OPHONE_V3
+        type: string
+    required:
+      - animationId
+      - UserOracle
+  LoginRequest:
+    title: LoginRequest
+    example:
+      username: re.daniel.ha
+      password: daniel1
+    type: object
+    properties:
+      username:
+        description: ''
+        example: re.daniel.ha
+        type: string
+      password:
+        description: ''
+        example: daniel1
+        type: string
+    required:
+      - username
+      - password
+  SendReportrequest:
+    title: Send reportRequest
+    example:
+      appVersion: 0.0.9
+      presenterId: 5DE06201649D0D03E053F403A8C003F5
+    type: object
+    properties:
+      appVersion:
+        description: ''
+        example: 0.0.9
+        type: string
+      presenterId:
+        description: ''
+        example: 5DE06201649D0D03E053F403A8C003F5
+        type: string
+    required:
+      - appVersion
+      - presenterId
+  AnimationByIdrequest:
+    title: Animation By IDRequest
+    example:
+      animationId: 652B8C3526BE2F17E053F403A8C05AA1
+      UserOracle: DEV_TOP_TRADE_OPHONE_V3
+    type: object
+    properties:
+      animationId:
+        description: ''
+        example: 652B8C3526BE2F17E053F403A8C05AA1
+        type: string
+      UserOracle:
+        description: ''
+        example: DEV_TOP_TRADE_OPHONE_V3
+        type: string
+    required:
+      - animationId
+      - UserOracle
+  SendFprequest:
+    title: Send FPRequest
+    example:
+      animationId: 648C00E9C0B41933E053F403A8C02BCC
+      presenterId: 3A316DF3C8347487E053F603A8C03468
+      hours_fp: '06/02/2018 16:16:40'
+      type: FP
+      UserOracle: DEV_TOP_TRADE_OPHONE_V3
+    type: object
+    properties:
+      animationId:
+        description: ''
+        example: 648C00E9C0B41933E053F403A8C02BCC
+        type: string
+      presenterId:
+        description: ''
+        example: 3A316DF3C8347487E053F603A8C03468
+        type: string
+      hours_fp:
+        description: ''
+        example: '06/02/2018 16:16:40'
+        type: string
+      type:
+        description: ''
+        example: FP
+        type: string
+      UserOracle:
+        description: ''
+        example: DEV_TOP_TRADE_OPHONE_V3
+        type: string
+    required:
+      - animationId
+      - presenterId
+      - hours_fp
+      - type
+      - UserOracle
+  SendPprequest:
+    title: Send PPRequest
+    example:
+      UserOracle: DEV_TOP_TRADE_OPHONE_V3
+      animationId: 648C00E9C0B41933E053F403A8C02BCC
+      answers: {}
+      hourspp: '06/02/2018 15:35'
+    type: object
+    properties:
+      UserOracle:
+        description: ''
+        example: DEV_TOP_TRADE_OPHONE_V3
+        type: string
+      animationId:
+        description: ''
+        example: 648C00E9C0B41933E053F403A8C02BCC
+        type: string
+      answers:
+        description: ''
+        example: {}
+        type: object
+      hourspp:
+        description: ''
+        example: '06/02/2018 15:35'
+        type: string
+    required:
+      - UserOracle
+      - animationId
+      - answers
+      - hourspp
+  DeleteRuptureRequest:
+    title: DeleteRuptureRequest
+    example:
+      typecall: DEL
+      UserOracle: DEV_TOP_TRADE_OPHONE_V3
+      animationId: 5DE0620164AF0D03E053F403A8C003F5
+      ProduitId: 6A363F40978F5668E053F403A8C07F43
+    type: object
+    properties:
+      typecall:
+        description: ''
+        example: DEL
+        type: string
+      UserOracle:
+        description: ''
+        example: DEV_TOP_TRADE_OPHONE_V3
+        type: string
+      animationId:
+        description: ''
+        example: 5DE0620164AF0D03E053F403A8C003F5
+        type: string
+      ProduitId:
+        description: ''
+        example: 6A363F40978F5668E053F403A8C07F43
+        type: string
+    required:
+      - typecall
+      - UserOracle
+      - animationId
+      - ProduitId
+  SendRuptureRequest:
+    title: SendRuptureRequest
+    example:
+      typecall: ADD
+      animationId: 68657BF3188968DEE053F403A8C0A262
+      presenterId: 3A316DF3C8347487E053F603A8C03468
+      storeId: 4E11FD4BB51010D9E053F403A8C09270
+      createdOn: '17/04/2018 16:14'
+      UserOracle: DEV_TOP_TRADE_OPHONE_V3
+      produitList:
+        69923BFA5ABD5E32E053F403A8C08C52: ''
+        698F6D0FC2E8093DE053F403A8C02B77: ''
+    type: object
+    properties:
+      typecall:
+        description: ''
+        example: ADD
+        type: string
+      animationId:
+        description: ''
+        example: 68657BF3188968DEE053F403A8C0A262
+        type: string
+      presenterId:
+        description: ''
+        example: 3A316DF3C8347487E053F603A8C03468
+        type: string
+      storeId:
+        description: ''
+        example: 4E11FD4BB51010D9E053F403A8C09270
+        type: string
+      createdOn:
+        description: ''
+        example: '17/04/2018 16:14'
+        type: string
+      UserOracle:
+        description: ''
+        example: DEV_TOP_TRADE_OPHONE_V3
+        type: string
+      produitList:
+        $ref: '#/definitions/ProduitList'
+    required:
+      - typecall
+      - animationId
+      - presenterId
+      - storeId
+      - createdOn
+      - UserOracle
+      - produitList
+  ProduitList:
+    title: ProduitList
+    example:
+      69923BFA5ABD5E32E053F403A8C08C52: ''
+      698F6D0FC2E8093DE053F403A8C02B77: ''
+    type: object
+    properties:
+      69923BFA5ABD5E32E053F403A8C08C52:
+        description: ''
+        type: string
+      698F6D0FC2E8093DE053F403A8C02B77:
+        description: ''
+        type: string
+    required:
+      - 69923BFA5ABD5E32E053F403A8C08C52
+      - 698F6D0FC2E8093DE053F403A8C02B77
+  CreateAbsencerequest:
+    title: Create AbsenceRequest
+    example:
+      presenterId: 5DE0620164510D03E053F403A8C003F5
+      animationDate: 20/02/2018
+      animationId: 652B8C35266E2F17E053F403A8C05AA1
+      reason: 38738DC3916242F9E053F403A8C0733A
+      comment: ''
+      UserOracle: DEV_TOP_TRADE_OPHONE_V3
+    type: object
+    properties:
+      presenterId:
+        description: ''
+        example: 5DE0620164510D03E053F403A8C003F5
+        type: string
+      animationDate:
+        description: ''
+        example: 20/02/2018
+        type: string
+      animationId:
+        description: ''
+        example: 652B8C35266E2F17E053F403A8C05AA1
+        type: string
+      reason:
+        description: ''
+        example: 38738DC3916242F9E053F403A8C0733A
+        type: string
+      comment:
+        description: ''
+        type: string
+      UserOracle:
+        description: ''
+        example: DEV_TOP_TRADE_OPHONE_V3
+        type: string
+    required:
+      - presenterId
+      - animationDate
+      - animationId
+      - reason
+      - comment
+      - UserOracle
+  GetDictionnariesRequest:
+    title: GetDictionnariesRequest
+    example:
+      presenterId: 5DE0620164AF0D03E053F403A8C003F5
+    type: object
+    properties:
+      presenterId:
+        description: ''
+        example: 5DE0620164AF0D03E053F403A8C003F5
+        type: string
+    required:
+      - presenterId
+  SendcommentRequest:
+    title: sendcommentRequest
+    example:
+      comment: éàààà
+      animationId: 6865A7D7E371699EE053F403A8C0CCCA
+      CommentDate: '16/04/2018 16:09:36'
+      UserOracle: DEV_TOP_TRADE_OPHONE_V3
+    type: object
+    properties:
+      comment:
+        description: ''
+        example: éàààà
+        type: string
+      animationId:
+        description: ''
+        example: 6865A7D7E371699EE053F403A8C0CCCA
+        type: string
+      CommentDate:
+        description: ''
+        example: '16/04/2018 16:09:36'
+        type: string
+      UserOracle:
+        description: ''
+        example: DEV_TOP_TRADE_OPHONE_V3
+        type: string
+    required:
+      - comment
+      - animationId
+      - CommentDate
+      - UserOracle
